@@ -1,0 +1,10 @@
+running detection on crack image using final weights:
+
+./darknet detector test data/obj.data cfg/yolov4-obj.cfg backup/yolov4-obj_final.weights data/competition_cracks/crack1.png 
+
+
+sed -i 's/OPENCV=1/OPENCV=0/' Makefile
+sed -i 's/GPU=1/GPU=0/' Makefile
+sed -i 's/CUDNN=1/CUDNN=0/' Makefile
+sed -i 's/CUDNN_HALF=1/CUDNN_HALF=0/' Makefile
+

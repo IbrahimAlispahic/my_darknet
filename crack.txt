@@ -1,0 +1,11 @@
+TESTcrack    5  122  299  159)
+crack    0    0    1    1 
+crack  122    5  281  304 
+TEST  122    5  281  304 
+TEST  122    5  281  304 
+data/competition_cracks/crack1.png  122    5  281  304 
+data/competition_cracks/crack1.png  122    5  281  304 
+crack1.png  122    5  281  304 
+crack1.png  122    5  281  304 
+crack1.png  122    5  281  304 
+crack2.png   52    3  256  307 
