@@ -326,7 +326,7 @@ int compare_by_probs(const void *a_ptr, const void *b_ptr) {
     return delta < 0 ? -1 : delta > 0 ? 1 : 0;
 }
 
-void draw_detections_v3(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes, int ext_output, char *image_name)
+void draw_detections_v3(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes, int ext_output, char *image_name, char *result_path)
 {
     static int frame_id = 0;
     frame_id++;
@@ -342,14 +342,14 @@ void draw_detections_v3(image im, detection *dets, int num, float thresh, char *
         printf("%s: %.0f%%", names[best_class],    selected_detections[i].det.prob[best_class] * 100);
         FILE* fp;
         char filename[256];
-        sprintf(filename, "%s.txt", names[i]);
+        sprintf(filename, "%s.txt", result_path);
         fp = fopen(filename, "a");
-        fprintf(fp, "%s %4.0f %4.0f %4.0f %4.0f \n",
+        fprintf(fp, "%s %.0f %.0f %.0f %.0f \n",
                 image_name,
-                round((selected_detections[i].det.bbox.y - selected_detections[i].det.bbox.h / 2)*im.h),
                 round((selected_detections[i].det.bbox.x - selected_detections[i].det.bbox.w / 2)*im.w),
-                round((selected_detections[i].det.bbox.y + selected_detections[i].det.bbox.h / 2)*im.h),
-                round((selected_detections[i].det.bbox.x + selected_detections[i].det.bbox.w / 2)*im.w));
+                round((selected_detections[i].det.bbox.y - selected_detections[i].det.bbox.h / 2)*im.h),
+                round((selected_detections[i].det.bbox.x + selected_detections[i].det.bbox.w / 2)*im.w),
+                round((selected_detections[i].det.bbox.y + selected_detections[i].det.bbox.h / 2)*im.h));
         fclose(fp);
         if (ext_output)
             printf("\t(left_x: %4.0f   top_y: %4.0f   width: %4.0f   height: %4.0f)\n",

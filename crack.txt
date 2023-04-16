@@ -9,3 +9,7 @@ crack1.png  122    5  281  304
 crack1.png  122    5  281  304 
 crack1.png  122    5  281  304 
 crack2.png   52    3  256  307 
+crack1.png    0   -0   10   10 
+crack1.png  122    5  281  304 
+crack1.png  122    5  281  304 
+crack3.jpg  155    3  452  452 
