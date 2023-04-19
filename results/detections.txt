@@ -1,4 +1,2 @@
 crack3.jpg 9 156 449 449 
 crack3.jpg 278 140 452 184 
-crack1.png 5 122 304 281 
-crack2.png 3 52 307 256 

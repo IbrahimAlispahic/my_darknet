@@ -13,5 +13,3 @@ for img_file in "$IMG_DIR"/*.{jpg,png}; do
         echo "$img_file is not an image file. Skipping."
     fi
 done
-
-# ./darknet detector test data/obj.data cfg/yolov4-obj.cfg backup/yolov4-obj_final.weights $1 -result_path results/$2 -dont_show
