@@ -1,1 +1,1 @@
-./darknet detector test data/obj.data cfg/yolov4-obj.cfg backup/yolov4-obj_final.weights $1 -dont_show 
+./darknet detector test data/obj.data cfg/yolov4-obj.cfg backup/yolov4-obj_final.weights $1 -dont_show -override_img
